@@ -22,14 +22,14 @@ const getSum = () => {
     // Create a single cell for the total price
     const totalCell = document.createElement("td");
     totalCell.colSpan = document.querySelector("table").rows[0].cells.length; // Span across all columns
-    totalCell.textContent = `Total Price: ${total.toFixed(2)}`; // Add total price
+    totalCell.textContent = `${total}`; // Add total price
 
     // Append the total cell to the row, and the row to the table
     totalRow.appendChild(totalCell);
     document.querySelector("table").appendChild(totalRow);
   } else {
     // Update the total if the row already exists
-    totalRow.textContent = `Total Price: ${total.toFixed(2)}`;
+    totalRow.firstChild.textContent = `${total}`;
   }
 };
 
